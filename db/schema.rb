@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_06_210139) do
+ActiveRecord::Schema.define(version: 2023_05_07_101029) do
 
   create_table "posts", force: :cascade do |t|
     t.string "content"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2023_05_06_210139) do
     t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
   end
 
 end
